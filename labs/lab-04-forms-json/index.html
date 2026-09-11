@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEU Tech Event Information and Registration Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>SEU Tech Event Information and Registration Page</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#interact">Interact</a></li>
+                <li><a href="#registration-form">Form</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Section 1: About Event -->
+        <section id="about">
+            <h2>About the Tech Event</h2>
+            <p>Welcome to the official portal for the SEU Tech Fest 2026. This event brings together technology enthusiasts, student developers, and innovative minds to demonstrate their skills, collaborate on technical projects, and network with industry leaders.</p>
+            <p>Our main goal is to promote practical software programming skills and foster innovation among computer science students through hands-on workshops and competitive coding tracks.</p>
+            
+            <!-- Div and Span Usage -->
+            <div class="event-highlight">
+                <p>Special Announcement: <span class="highlight-text">Registration is completely free for all active Southeast University students!</span></p>
+            </div>
+
+            <!-- JPG Image with Alt Attribute -->
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=80" alt="Students collaborating at a tech workshop" class="event-img">
+
+            <!-- Hyperlink -->
+            <p>For official university announcements, visit the <a href="https://www.seu.edu.bd" target="_blank">Southeast University Website</a>.</p>
+        </section>
+
+        <!-- Section 2: Event Details & Schedule -->
+        <section id="schedule">
+            <h2>Event Details & Schedule</h2>
+            
+            <h3>Key Topics Covered (Unordered List)</h3>
+            <ul>
+                <li>Web & Application Development</li>
+                <li>Database Design & Relational Architectures</li>
+                <li>Artificial Intelligence & Machine Learning</li>
+            </ul>
+
+            <h3>Participation Steps (Ordered List)</h3>
+            <ol>
+                <li>Complete the online registration form below.</li>
+                <li>Receive your digital participation pass via email.</li>
+                <li>Attend the inauguration session on event day.</li>
+            </ol>
+
+            <h3>Event Rules & Guidelines (Nested List)</h3>
+            <ul>
+                <li>General Regulations
+                    <ul>
+                        <li>Must carry a valid Student ID card.</li>
+                        <li>Laptops are required for hands-on sessions.</li>
+                    </ul>
+                </li>
+                <li>Code of Ethics
+                    <ul>
+                        <li>Maintain academic integrity in coding sessions.</li>
+                        <li>Collaborate respectfully with fellow attendees.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Workshop Timeline</h3>
+            <!-- Table with 1 Header Row and 4 Data Rows -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Session Title</th>
+                        <th>Speaker / Mentor</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00 AM - 10:30 AM</td>
+                        <td>Inauguration & Keynote Address</td>
+                        <td>Head of CSE Department</td>
+                        <td>Main Auditorium</td>
+                    </tr>
+                    <tr>
+                        <td>10:45 AM - 01:00 PM</td>
+                        <td>Modern Web Architecture Workshop</td>
+                        <td>Guest Industry Expert</td>
+                        <td>Computer Lab 1</td>
+                    </tr>
+                    <tr>
+                        <td>02:00 PM - 04:00 PM</td>
+                        <td>Project Presentation Showcase</td>
+                        <td>Student Developers</td>
+                        <td>Computer Lab 2</td>
+                    </tr>
+                    <tr>
+                        <td>04:15 PM - 05:00 PM</td>
+                        <td>Prize Distribution & Closing</td>
+                        <td>Dean, Faculty of Science & Tech</td>
+                        <td>Main Auditorium</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 3: JavaScript Interactions (Lab 03) -->
+        <section id="interact">
+            <h2>Live Registration Tools</h2>
+
+            <!-- Interaction 1: Registration status -->
+            <h3>Registration Status</h3>
+            <button type="button" onclick="checkRegistration()">Check Registration Status</button>
+            <p id="registrationStatus">Click the button to check the status.</p>
+
+            <!-- Interaction 2: Seat availability -->
+            <h3>Seat Availability</h3>
+            <button type="button" onclick="checkSeats()">Check Seat Availability</button>
+            <p id="seatMessage">Seat information will appear here.</p>
+
+            <!-- Independent feature: event venue reminder -->
+            <h3>Venue Reminder</h3>
+            <button type="button" onclick="showVenue()">Show Event Venue</button>
+            <p id="venueMessage">Click the button to see the venue.</p>
+        </section>
+
+        <!-- Section 4: Registration Form -->
+        <section id="register">
+            <h2>Student Registration Form</h2>
+            <form action="#" method="post">
+                
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Interaction 3: Personal greeting (Lab 03) -->
+                <div class="form-group">
+                    <button type="button" onclick="showGreeting()">Show Greeting</button>
+                    <p id="greetingMessage"></p>
+                </div>
+
+                <!-- Student ID -->
+                <div class="form-group">
+                    <label for="studentid">Student ID:</label>
+                    <input type="text" id="studentid" name="studentid" placeholder="e.g. 2023000000001" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="student@seu.edu.bd" required>
+                </div>
+
+                <!-- Preferred Date -->
+                <div class="form-group">
+                    <label for="prefdate">Preferred Date:</label>
+                    <input type="date" id="prefdate" name="prefdate" required>
+                </div>
+
+                <!-- Radio Group -->
+                <div class="form-group">
+                    <label>Participation Role:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="role" value="attendee" checked> Attendee</label>
+                        <label><input type="radio" name="role" value="volunteer"> Volunteer</label>
+                    </div>
+                </div>
+
+                <!-- Two Checkbox Options -->
+                <div class="form-group">
+                    <label>Tracks of Interest:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="interest" value="web"> Web Development</label>
+                        <label><input type="checkbox" name="interest" value="db"> Database Architecture</label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Registration</button>
+            </form>
+        </section>
+
+        <!-- Section 5: Lab 04 - Workshop Registration Form with Validation, JSON and localStorage -->
+        <section id="registration-form">
+            <h2>Workshop Registration (Form, Validation, JSON & Storage)</h2>
+
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="studentName">Full Name</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentEmail">Email Address</label>
+                    <input type="email" id="studentEmail" name="studentEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="workshop">Workshop</label>
+                    <select id="workshop" name="workshop" required>
+                        <option value="">Select a workshop</option>
+                        <option value="HTML Basics">HTML Basics</option>
+                        <option value="CSS Basics">CSS Basics</option>
+                        <option value="JavaScript Basics">JavaScript Basics</option>
+                    </select>
+                </div>
+
+                <button type="button" onclick="submitRegistration()">Register</button>
+                <p id="formMessage"></p>
+            </form>
+
+            <h3>Registration Data (JSON)</h3>
+            <pre id="jsonOutput"></pre>
+
+            <h3>Saved Registration</h3>
+            <button type="button" onclick="showSavedRegistration()">Show Saved Registration</button>
+            <button type="button" onclick="clearRegistration()">Clear Saved Registration</button>
+            <p id="savedMessage"></p>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Southeast University | Web and Internet Programming Lab</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
